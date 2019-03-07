@@ -1,0 +1,21 @@
+<h2 class = "center"> Teams </h2>
+<hr />
+<div class = "row">
+<div class = "col s12 m6">
+<ul id="teams-list">
+<% @teams.each do |team| %>
+  <li
+  class = "team-item"
+    data-id = <%= team.id %>
+    >
+    <%= team.city %> <%=team.name%>
+    </li>
+    <% end %>
+    </ul>
+    </div>
+    <div class = "row" id = "player-list">
+    <h3 id = "team">Players on Team</h3>
+    <ul id = "players">
+    </ul>
+    </div>
+    </div>
