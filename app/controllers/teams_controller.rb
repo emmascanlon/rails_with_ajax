@@ -24,6 +24,11 @@ class TeamsController < ApplicationController
     end
   end
 
+  def form
+    @team = Team.new
+    render partial: 'form'
+  end
+
   def destroy
     @team.destroy
     render json: { message: 'removed' }, status: :ok
