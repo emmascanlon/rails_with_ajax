@@ -5,14 +5,12 @@
   <button class = "btn" id="toggle"> Show Form</button>
     <ul id="teams-list">
       <% @teams.each do |team| %>
-        <li class= "team-item" data-id=<%= team.id %> data-name= "<%= team.name %>"
-          > <%= team.city %> <%=team.name%> 
-        </li>
-      <% end %>
+        <%= render partial: 'team', locals: { team: team } %>
+        <% end %> 
     </ul>
   </div>
   <div class = "row" id = "player-list">
-  <h3 id = "team">Players on Team</h3>
+  <h3 id = "team">Players on Team </h3>
   <ul id = "players">
     </ul>
   </div>

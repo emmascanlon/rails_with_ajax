@@ -5,6 +5,7 @@ class TeamsController < ApplicationController
   end
 
   def show
+    render partial: 'team', locals: {team: @team }
   end
 
   def create

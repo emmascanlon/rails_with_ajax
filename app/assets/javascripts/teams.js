@@ -55,4 +55,12 @@ function toggle() {
   showForm = !showForm;
   $('#team-form').remove()
 }
+function getTeam(id) {
+  $.ajax({
+    url: '/teams/' + id,
+    method: 'GET'
+  }).done( function(game) {
+    $('#teams-list').apprend(team);
+  });
+}
   });
